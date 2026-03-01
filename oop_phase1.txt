@@ -1,0 +1,165 @@
+Q1. How to create a class and object in Python? Write a Python program to demonstrate the working of self, __init__(), and super keyword.
+
+Syntax:
+class ClassName:
+    # data members
+    # member functions
+
+Syntax:
+object_name = ClassName()
+
+When an object is created, memory is allocated and constructor is called automatically.
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+    print("Student constucutor called")
+
+class Student(Person):
+    def super().__init__(self, name, roll):
+        super().__init__(name)
+        self.roll = roll
+        print("Student Cons. called")
+
+    def display(self):
+        print("Name:", self.name)
+        print("Roll no.:, self.roll)
+
+s1 = Student("Rutul", 21)
+s1.display()
+
+Working of Keywords
+
+✔ self
+Refers to current object.
+Used to access instance variables and methods.
+
+✔ init()
+Special method called constructor.
+Executes automatically when object is created.
+Used to initialize object data.
+
+✔ super()
+Used to call parent class methods.
+Mainly used to call parent constructor in inheritance.
+
+Output:
+Person Constructor Called
+Student Constructor Called
+Name: Rutul
+Roll No: 21
+
+
+
+Q.3 explain oop in ppython
+
+Object Oriented Programming (OOP) is a programming approach in which programs are organized using classes and objects. It is based on real-world concepts where objects contain both data and functions. OOP improves code reusability, security, and maintainability.
+
+1. Encapsulation:
+
+wrapping data and method inside a sinlge unit.
+protects data from unauthorized access.
+
+ex. data members and meyhods defined inside a class
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+2. Abstraction:
+
+Abstraction means hiding internal implementation details and showing only essential features to the user.
+
+In Python, abstraction can be achieved using classes and methods where the internal working is hidden from the user.
+
+Example: User calls a method without knowing its internal logic.
+
+3. inheritance:
+
+Inheritance allows one class to acquire properties and methods of another class. It promotes code reusability.
+
+Example:
+
+class Person:
+    def show(self):
+        print("This is Person")
+
+class Student(Person):
+    pass
+
+Here, Student inherits the show() method from Person.
+
+4. 4. Polymorphism
+
+Polymorphism means one function or operator behaves differently in different situations.
+
+Example:
+
+print(5 + 2)      # Adds numbers
+print("A" + "B")  # Concatenates strings
+
+The + operator behaves differently based on data type.
+
+
+
+Q8. Explain working of self keyword in Python.
+
+The self keyword in Python refers to the current object of a class. It is used to access instance variables and methods inside the class.
+
+When a method is called using an object, the object is automatically passed as the first argument to the method. This first parameter is written as self by convention.
+
+self helps to differentiate between instance variables (belonging to object) and local variables (temporary variables inside method).
+
+ Explanation
+
+self refers to the object that calls the method.
+In self.name = name, the value is stored inside the object.
+When s1.display() is executed, self refers to s1.
+Using self, object data can be accessed inside methods.
+
+🔹 Important Points
+
+self is not a keyword, but a convention.
+
+It must be written as the first parameter in instance methods.
+
+It is automatically passed when method is called using object.
+
+It is used to access and modify object data.
+
+
+
+Q9. Explain __init__() Method in Python
+
+The __init__() method in Python is a special method known as a constructor. It is automatically executed when an object of a class is created. 
+Its main purpose is to initialize the data members (instance variables) of the class.
+
+
+def __init__(self,paramters)
+    # initialization code
+
+class Student:
+    def __init__(self,name, roll)
+        self.name = name
+        self.roll = roll
+
+    def display(self)
+        print("Name:", self.name")
+        print("Roll:", self.roll")
+
+s1 = Student('Rutul', 21)
+s1.display()
+
+Explanation
+
+__init__() is defined inside the Student class.
+
+When s1 = Student("Rutul", 21) is executed, the constructor is called automatically.
+
+"Rutul" is assigned to self.name.
+
+21 is assigned to self.roll.
+
+The object s1 is initialized with given values.
+
+display() method prints the stored values.

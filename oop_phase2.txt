@@ -1,0 +1,74 @@
+Inheritance allows a child class to acquire properties and methods of a parent class.
+
+class Parent:
+    # features
+
+class Child:
+    # child features
+
+class Person:
+    def show(self):
+        print("I am a Person")
+
+class Student(Person):
+    pass
+
+s1 = Student()
+s1.show()   
+
+---
+class A:
+    def hello(self):
+        print("Hello")
+
+class B(A):
+    pass
+
+obj = B()
+
+We did NOT call:
+obj.hello()
+So nothing will print.
+Output → Nothing
+Not even None.
+
+----
+class A:
+    def hello(self):
+        print("Hello from A")
+
+class B(A):
+    def hello(self):
+        print("Hello from B")
+
+obj = B()
+obj.hello()
+
+--- IMPORTANT
+When method is called:
+
+Python checks in the object’s class first.
+
+If not found → then it checks in parent class.
+
+If still not found → error.
+
+So here:
+B has hello() ✔
+So A’s hello() is ignored.
+
+**** This is called method overriding. ****
+Child replaces parent method.
+
+
+You thought:
+No object of A is created → so maybe A runs or not?
+
+Important:
+
+Even if no object of A is created,
+B still inherits A’s methods.
+
+But if B defines its own method with same name,
+that one is used.
+
