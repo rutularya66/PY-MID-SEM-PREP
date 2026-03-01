@@ -1,0 +1,196 @@
+
+What is a Module in Python?
+
+Think simple.
+
+A module is just a Python file that contains:
+
+Functions
+Variables
+Classes
+
+That you can use in another program.
+
+A module in Python is a file containing Python definitions and statements such as functions, variables, and classes
+
+Why Do We Need Modules?
+
+Without modules:
+
+You would rewrite same code again and again.
+
+Modules help in:
+
+✔ Reusability
+✔ Organizing code
+✔ Avoiding repetition
+✔ Keeping program clean
+breaking larger programs into smaller parts
+
+Important Understanding
+
+When you write:
+import math
+
+Python loads that file into your program.
+So now you can access its contents.
+
+
+One More Important Thing
+
+When you write:
+import math
+
+You must use:
+math.sqrt()
+
+Because sqrt belongs to math module.
+
+If you write:
+
+from math import sqrt
+Then you can directly write:
+sqrt(25)
+
+No need math.
+
+
+Types of Modules
+
+There are two main types:
+
+1️⃣ Built-in Modules
+
+Already provided by Python.
+Examples:
+
+math
+time
+random
+sys
+You just import and use.
+
+2️⃣ User-defined Modules
+
+Files created by you.
+
+Example:
+If you create:
+myfile.py
+
+That file itself becomes a module.
+
+
+
+q. MATH MODULE IN PYTHON
+
+The math module is a built-in Python module that provides mathematical functions and constants.
+
+It is used when we need advanced mathematical operations such as:
+
+Square root
+Power
+Factorial
+Trigonometric functions
+Logarithms
+Rounding functions
+
+Without the math module, we would have to manually implement these operations.
+
+Why We Use Math Module:
+
+1. To perform complex mathematical calculations easily
+
+2. To avoid writing lengthy manual logic
+
+3. To improve program efficiency
+
+4. To use predefined mathematical constants
+
+5. To simplify scientific and engineering calculations
+
+
+Factorial – factorial()
+
+Returns factorial of a number.
+👉 Very famous exam question.
+
+import math
+num = 5
+print("Factorial is:", math.factorial(num))
+
+Output:
+Factorial is: 120
+
+4️⃣ Ceiling and Floor
+
+ceil() → rounds number upward
+floor() → rounds number downward
+
+import math
+print(math.ceil(4.3))
+print(math.floor(4.7))
+
+Output:
+5
+4
+
+
+
+Q. TIME MODULE
+
+-- The time module in Python is used to work with time-related operations.
+
+
+1️⃣ Getting Current Time
+
+The function time.time() returns the current time in seconds from a fixed reference point called the Epoch (January 1, 1970).
+
+import time 
+current = time.time()
+print(current)
+
+2️⃣ Converting Time into Readable Format
+
+Since raw seconds are not readable, we use ctime().
+
+import time
+print(time.ctime())
+
+This prints current date and time in readable format like:
+
+Mon Feb 12 10:15:30 2026 (auto format)
+
+
+3️⃣ Pausing Program Execution – sleep()
+
+One of the most practical uses of time module is sleep().
+It pauses the program for a specified number of seconds.
+
+import time
+print("start")
+time.sleep(3)
+print("end")
+
+4️⃣ Measuring Execution Time (Important Practical Use)
+
+A very useful pattern is calculating how long a piece of code takes to run.
+
+import time
+
+start = time.time()
+
+for i in range (1000):
+    pass
+
+end = time.time()
+
+print("Execution time:", end - start)
+
+Here’s what happens:
+
+Store current time before loop
+Run loop
+Store time after loop
+Subtract
+

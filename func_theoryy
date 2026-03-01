@@ -1,0 +1,159 @@
+A function in Python is a block of reusable code that performs a specific task.
+
+Instead of writing the same code again and again, we define a function once and call it whenever needed.
+
+Functions help in:
+1. Code reusability
+2. Reducing repetition
+3. Making program organized
+4. Improving readability
+
+A function runs only when it is called.
+
+syntax:
+def function_name(parameters):
+    statements
+
+
+-- Types of Functions in Python:
+
+1️⃣ Built-in Functions
+These are predefined functions provided by Python.
+Example: print(), len(), type(), sum()
+
+2️⃣ User-defined Functions
+Functions created by the programmer using the def keyword.
+Example:
+
+def add(a, b):
+    return a + b
+
+3️⃣ Functions with Parameters
+Functions that accept input values.
+Example: def add(a, b):
+
+4️⃣ Functions with Return Values
+Functions that return a value using the return statement.
+
+5️⃣ Lambda Functions
+Small anonymous functions defined using lambda keyword.
+
+
+
+Q2: Explain User Defined Function with Example.
+
+A user-defined function is a function that is created by the programmer to perform a specific task.
+
+Unlike built-in functions (like print() or len()), user-defined functions are written using the def keyword.
+
+They help:
+
+1. Break large programs into smaller parts
+
+2. Avoid repetition
+
+3. Improve readability
+
+4. Make debugging easier
+
+synax:
+def function_name(parameters):
+    statements
+    return value
+
+def → keyword to define function
+function_name → name of the function
+parameters → input values (optional)
+return → sends result back (optional)
+
+def add(a, b):
+    result = a + b
+    return result
+
+sum = add(10, 5)
+print("Sum is:", sum)
+
+oCnclusion:
+
+Thus, user-defined functions allow programmers to create customized functions according to program requirements and make the program structured and reusable.
+
+
+
+Q3: Explain Function with Parameters and Return Values
+
+A function with parameters means the function takes input values.
+
+A function with return value means the function sends a result back to the place where it was called.
+
+So:
+
+Parameters → Input
+
+Return → Output
+
+This makes the function flexible and reusable.
+
+
+def function_name(parameter1, parameter2):
+    statements
+    return value
+
+
+def add(a, b):
+    sum = a + b
+    return sum
+
+result = add(10, 5)
+print("Sum is:", result)
+
+Importance:
+
+Functions with parameters and return values make programs:
+
+1. More flexible
+
+2. Reusable
+
+3. Easy to test
+
+4. Easy to maintain
+
+
+
+
+Q4: Explain Global and Local Variables in Python
+
+-- Scope means:
+👉 The area of the program where a variable can be accessed.
+
+🟦 Simple Understanding (Concept First)
+
+
+In Python, variables can be defined:
+Inside a function
+Outside a function
+
+Depending on where they are defined, their scope (visibility) changes.
+
+Local Variable → Created inside a function. It works only inside that function.
+
+Global Variable → Created outside all functions. It can be accessed throughout the program.
+
+
+
+3️⃣ Important Scope Rule (Very Important)
+
+If a variable is assigned inside a function, Python treats it as a local variable for that entire function.
+
+This can cause an error if we try to use it before assigning.
+
+Tricky Example:
+x = 10
+
+def test():
+    print(x)
+    x = 5
+
+test()
+
+This produces an error.
