@@ -1,4 +1,4 @@
-# 1. ARMSTRONG NUMBER:
+# 1. (V.IMP) ARMSTRONG NUMBER:
 '''
 num = int(input("Enter number: "))   # take input from user
 
@@ -22,7 +22,7 @@ else:
 
 
 
-# 2. PALINDROME NUMBER: A palindrome number is a number that reads the same backward as forward. For example, 121 is a palindrome, while 123 is not.
+# 2. (IMP) PALINDROME NUMBER: A palindrome number is a number that reads the same backward as forward. For example, 121 is a palindrome, while 123 is not.
 ''''
 num = int(input("Enter number: "))   # take input
 
@@ -46,7 +46,7 @@ else:
 
 
 
-# 3. FIBONACCI SERIES UPTO N TERMS:
+# 3. (AVG) FIBONACCI SERIES UPTO N TERMS:
 '''
 n = int(input("Enter number of terms: "))  # how many terms
 
@@ -68,7 +68,7 @@ while count < n:
 
 
 
-# 4. SUM OF A PARTICULAR RANGE USING reduce() FUNCTION:
+# 4. (AVG) SUM OF A PARTICULAR RANGE USING reduce() FUNCTION:
 
 # The reduce() function is a part of the functools module in Python and is used to apply a specified function cumulatively to the items of an iterable, from left to right, reducing the iterable to a single value. In this case, we can use reduce() to calculate the sum of a range of numbers.
 '''
@@ -88,8 +88,8 @@ print("Sum is:", result)
 '''
 
 
-# 5. ACCEPT A SENTENCE AND CALCULATE THE NUMBER OF LETTERS AND DIGITS.
-
+# 5. (AVG)ACCEPT A SENTENCE AND CALCULATE THE NUMBER OF LETTERS AND DIGITS.
+'''
 sentence = input("Enter a sentence: ")
 
 letters = 0 # to count letters
@@ -108,3 +108,19 @@ print("Number of digits:", digits)
 # Number of letters: 5
 # Number of digits: 3
 
+'''
+
+# 10. (AVG) EVEN NUMBERS IN SPECIFIC RANGE USING filter() FUNCTION:
+
+start = int(input("Enter start: "))
+end = int(input("Enter end: "))
+
+numbers = range(start, end + 1)  # create a range of numbers from start to end
+
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))  # filter even numbers using lambda function
+
+print("Even numbers in the range:", even_numbers)
+
+# OUTPUT: Enter start: 2
+# Enter end: 13
+# Even numbers in the range: [2, 4, 6, 8, 10, 12]
